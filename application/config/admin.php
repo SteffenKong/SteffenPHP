@@ -12,8 +12,9 @@ return [
         'type'=>'mysql',
         'host'=>'127.0.0.1',
         'dbUser'=>'root',
-        'dbPass'=>'123456',
+        'dbPass'=>'abc123',
         'port'=>'3306',
-        'dbName'=>'test',
+        'dbName'=>'steffenphp',
+        'dbChar'=>'utf8'
     ]
 ];

@@ -12,10 +12,11 @@ class IndexController extends Controller {
 
     public function __construct()
     {
+        parent::__construct();
         $this->model = Loader::sigltion(Model::class);
     }
 
-    public function test() {
+    public function index() {
 
     }
 }

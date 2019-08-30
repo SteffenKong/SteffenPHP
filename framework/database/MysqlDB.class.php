@@ -20,8 +20,20 @@ class MysqlDB implements DB {
     private $dbChar;
     private $dbPrefix;
     private $conn;
+    private static $instance;
 
-    public function __construct($config = [])
+
+    private function __clone() {}
+
+
+    public static function getSigle($config) {
+        if(self::$instance instanceof self) {
+            return self::$instance;
+        }
+        return self::$instance = new self($config);
+    }
+
+    private function __construct($config = [])
     {
         $this->host = isset($config['host'])?$config['host']:'';
         $this->port = isset($config['port'])?$config['port']:'';
@@ -60,7 +72,7 @@ class MysqlDB implements DB {
      * 设置数据库编码
      */
     public function setChar($dbChar) {
-        mysqli_query('set names '.$dbChar);
+        mysqli_query($this->conn,'set names '.$dbChar);
     }
 
 
