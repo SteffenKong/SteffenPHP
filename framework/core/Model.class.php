@@ -29,10 +29,10 @@ class Model {
     private function getFields() {
         $sql = "DESC $this->table";
         $fields = $this->dao->fetchAll($sql);
-        foreach ($fields ?? [] $key=>$value) {
+        foreach ($fields ?? [] as  $key=>$value) {
             $this->field[] = $value;
-            if($value['key'] == 'PRI') {
-                $pk = $value['key'];
+            if($value['Key'] == 'PRI') {
+                $pk = $value['Key'];
             }
 
             if (isset($pk)) {
