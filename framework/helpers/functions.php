@@ -9,6 +9,9 @@
 
 //辅助函数库
 
+/**
+ * 调试函数
+ */
 if(!function_exists('dd')) {
     function dd() {
         $args = func_get_args();
