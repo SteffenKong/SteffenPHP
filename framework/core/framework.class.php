@@ -79,8 +79,12 @@ class framework {
         $frameworkList = [
             'DB'=>DATABASE.$className.'.interface.php',
             'MysqlDB'=>DATABASE.$className.'.class.php',
+            'PdoDB'=>DATABASE.$className.'.class.php',
             'Model'=>CORE.$className.'.class.php',
-            'Controller'=>CORE.$className.'.class.php'
+            'Controller'=>CORE.$className.'.class.php',
+            'Captcha'=>CORE.$className.'.class.php',
+            'Upload'=>CORE.$className.'.class.php',
+            'Image'=>CORE.$className.'.class.php'
         ];
 
         if(isset($frameworkList[$className])) {

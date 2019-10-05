@@ -5,7 +5,7 @@
  * Date: 19-8-26
  * Time: 19-8-26
  */
-class PdoDb implements DB {
+class PdoDB implements DB {
 
     /**
      * @param $sql

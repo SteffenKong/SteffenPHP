@@ -85,8 +85,8 @@ class Captcha {
         $code = $this->getRandCode();
         $x = ($this->width/$this->length)+2;
         $y = $this->height/1.5;
-        $path = 'D:/all/web/PHPTutorial/WWW/SteffenPHP/framework/libraries/angsau.ttf';
-        imagettftext($this->imgObj,$this->fontSize,$angle,$x,$y,$this->getRandColor(),$path,$code);
+        $fontDirPath = 'D:/all/web/PHPTutorial/WWW/SteffenPHP/framework/libraries/fonts';
+        imagettftext($this->imgObj,$this->fontSize,$angle,$x,$y,$this->getRandColor(),$fontDirPath,$code);
 
 
         if(!empty($this->snow)) {
