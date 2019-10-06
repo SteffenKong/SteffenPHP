@@ -84,7 +84,8 @@ class framework {
             'Controller'=>CORE.$className.'.class.php',
             'Captcha'=>CORE.$className.'.class.php',
             'Upload'=>CORE.$className.'.class.php',
-            'Image'=>CORE.$className.'.class.php'
+            'Image'=>CORE.$className.'.class.php',
+            'Redis'=>CORE.$className.'.class.php'
         ];
 
         if(isset($frameworkList[$className])) {
@@ -92,9 +93,9 @@ class framework {
         }elseif(substr($className,-10) == 'Controller') {
             require_once CUR_CONTROLLER.$className.'.class.php';
         }elseif(substr($className,-5) == 'Model') {
-            require_once CUR_CONTROLLER.$className.'.class.php';
+            require_once MODELS.$className.'.class.php';
         }else {
-            //不错处理
+            //不做处理
         }
     }
 

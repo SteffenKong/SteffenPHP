@@ -12,7 +12,7 @@ return [
         'type'=>'mysql',
         'host'=>'127.0.0.1',
         'dbUser'=>'root',
-        'dbPass'=>'abc123',
+        'dbPass'=>'helloworld123+',
         'port'=>'3306',
         'dbName'=>'steffenphp',
         'dbChar'=>'utf8'

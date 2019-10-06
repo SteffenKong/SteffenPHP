@@ -20,6 +20,6 @@ if(!function_exists('dd')) {
             var_dump($v);
             echo '<hr/>';
         }
-        return true;
+        exit;
     }
 }

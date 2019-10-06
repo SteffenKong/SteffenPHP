@@ -195,16 +195,16 @@ class Upload {
     }
 }
 
-$upload = new Upload([
-    'filePath'=>'./upload',
-    'size'=>10240*1024,
-    'allowExt'=>['.jpeg','.gif','.jpg','png'],
-    'allowMime'=>['image/png','image/gif','image/jpg','image/jpeg'],
-    'imageFlag'=>true
-]);
-$res = $upload->upFile($_FILES['image'],'');
-
-if(!$res) {
-    echo $upload->getErrorMessage();
-}
+//$upload = new Upload([
+//    'filePath'=>'./upload',
+//    'size'=>10240*1024,
+//    'allowExt'=>['.jpeg','.gif','.jpg','png'],
+//    'allowMime'=>['image/png','image/gif','image/jpg','image/jpeg'],
+//    'imageFlag'=>true
+//]);
+//$res = $upload->upFile($_FILES['image'],'');
+//
+//if(!$res) {
+//    echo $upload->getErrorMessage();
+//}
 
